@@ -1,0 +1,11 @@
+Package: capr
+Type: Package
+Title: Let's interact with REDCap through the API. Good Stuff :-)
+Version: 0.1
+Date: 2014-09-03
+Author: Isaac Jenkins
+Maintainer: Isaac Jenkins <icj@email.arizona.edu>
+Description: Interact with your REDCap project through the API
+License: MIT + file LICENSE
+Imports:
+    RCurl
