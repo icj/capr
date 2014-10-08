@@ -7,7 +7,8 @@ Author: Isaac Jenkins
 Maintainer: Isaac Jenkins <icj@email.arizona.edu>
 Description: Interact with your REDCap project through the API
 License: MIT + file LICENSE
-Depends: dplyr
+Depends:
+    dplyr
 Imports:
     RCurl,
     stringr

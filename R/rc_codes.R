@@ -18,9 +18,6 @@ rc_codes <- function(dict) {
     lapply(function(x) {
       out <- data.frame(x, stringsAsFactors = FALSE)
       names(out) <- c("raw", "label")
-      if (!any(is.na(suppressWarnings(as.integer(out$raw))))) {
-        out$raw <- as.integer(out$raw)
-      }
       out$label <- factor(out$raw, 
                           levels = out$raw,
                           labels = out$label)
