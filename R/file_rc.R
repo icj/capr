@@ -6,19 +6,18 @@
 #' 
 #' @param url The url for your REDCap project.
 #' @param token API token (character string).
-#' @param certificate Certificate file (with path) containing REDCap security
 #' @param action Either import or delete
 #' @param id Record id to import file to
 #' @param field Field that holds the file
 #' @param event The event you want the file sent to
 #' @param file Your file (character string--don't forget the path)
 #' @param verbose Logical (default = FALSE). Verbose output from the posting
-file_rc <- function(url, certificate, token, action, id, field, file = NULL, 
+file_rc <- function(url, token, action, id, field, file = NULL, 
                     event = NULL, verbose = FALSE) {
   if (!(action %in% c("import", "delete"))) {
     stop("action nees to be either 'import' or 'delete'")
   }
-  post_rc(url, certificate, verbose = verbose,
+  post_rc(url, verbose = verbose,
           token = token,
           content = "file",
           action = action,

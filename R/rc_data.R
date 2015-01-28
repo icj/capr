@@ -4,7 +4,6 @@
 #' 
 #' @param url The url for your REDCap project.
 #' @param token API token (character string).
-#' @param certificate Certificate file (with path) containing REDCap security
 #' @param verbose Logical (default = FALSE). Verbose output from the posting.
 #' @param format Currently only handles "csv"
 #' @param type Can use "eav" (which is long format) or "flat" (which is wide format).
@@ -19,11 +18,11 @@
 #' @return If friendly = TRUE, then a data frame containing the requested data.
 #'   If friendly = FALSE then a Large Character object containing the data
 #'   (you probably don't want this).
-rc_data <- function(url, certificate, token, verbose = FALSE,
+rc_data <- function(url, token, verbose = FALSE,
                     format = "csv", type = "eav",
                     raw_or_label = "raw", ids = NULL, fields = NULL, 
                     forms = NULL, events = NULL, friendly = TRUE, ...) {
-  out <- post_rc(url, certificate, verbose = verbose,
+  out <- post_rc(url, verbose = verbose,
                  token = token,
                  content = "record",
                  format = format,
