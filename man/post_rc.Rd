@@ -9,9 +9,6 @@ post_rc(uri, certificate, verbose = FALSE, ...)
 \arguments{
 \item{uri}{The uri for your REDCap project.}
 
-\item{certificate}{Certificate file (with path) containing REDCap security
-certificate.}
-
 \item{verbose}{Logical (default = FALSE). Verbose output from the posting.}
 
 \item{...}{REDCap API inputs to send in the post.}
